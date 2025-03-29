@@ -53,16 +53,16 @@
 
         raise_layer {
 // ------------------------------------------------------------------------------------------------------------
-// | BTCLR | BT1| BT2|  BT3|  BT4 |  BT5|               |     |     |      |      |      |       |
-// |       |    |    |     |      |     |               |     |     |      |  "[" |   "]"|       |
-// |       |    |    |     |      |     |               |     |     |      |  "{" |  "}" |       |
-// |       |    |    |     |      |     |      |  | rgb |     |     |      |  "(" |   ")"|   \   |
-//                         |      |     |      |  |     |     | DEL |      |      |
+// |  BTCLR  |    BT1   |    BT2   |    BT3   |    BT4  |    BT5   |               |     |     |      |      |      |       |
+// |         |          |          |          |         |          |               |     |     |      |  "[" |   "]"|       |
+// |RGB BRI+ | RGB SAT+ | RGB HUE+ | RGB ANI+ |  BL_TOG |          |            |     |     |      |  "{" |  "}" |       |
+// |RGB BRI- | RGB SAT- | RGB HUE- | RGB ANI- |  EP_TOG |          |   | | rgb |     |     |      |  "(" |   ")"|   \   |
+//                                 |          |         |          |   | |     |     | DEL |      |      |
             bindings = <
 &bt BT_CLR &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3 &bt BT_SEL 4                       &trans      &trans    &trans    &trans   &trans    &trans
 &trans &trans &trans &trans  &trans  &trans                       &trans      &trans    &trans    &kp LBKT &kp RBKT    &trans
-&trans    &trans &trans &trans  &trans  &trans                       &trans      &trans  &trans  &kp LBRC  &kp RBRC &trans
-&trans    &trans  &trans &trans &trans &trans   &trans   &rgb_ug RGB_TOG    &trans &trans &trans  &kp LPAR  &kp RPAR &kp BSLH
+&rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_EFF &trans                       &trans      &trans  &trans  &kp LBRC  &kp RBRC &trans
+&rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_EFR &trans   &trans   &rgb_ug RGB_TOG    &trans &trans &trans  &kp LPAR  &kp RPAR &kp BSLH
                         &trans  &trans  &trans    &trans   &trans    &kp DEL      &trans    &trans
             >;
 
