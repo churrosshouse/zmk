@@ -61,8 +61,8 @@
             bindings = <
 &bt BT_CLR &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3 &bt BT_SEL 4                       &trans      &trans    &trans    &trans   &trans    &trans
 &trans &trans &trans &trans  &trans  &trans                       &trans      &trans    &trans    &kp LBKT &kp RBKT    &trans
-&rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_EFF &trans                       &trans      &trans  &trans  &kp LBRC  &kp RBRC &trans
-&rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_EFR &trans   &trans   &rgb_ug RGB_TOG    &trans &trans &trans  &kp LPAR  &kp RPAR &kp BSLH
+&trans &rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_EFF                        &trans      &trans  &trans  &kp LBRC  &kp RBRC &trans
+&trans &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_EFR    &trans   &rgb_ug RGB_TOG    &trans &trans &trans  &kp LPAR  &kp RPAR &kp BSLH
                         &trans  &trans  &trans    &trans   &trans    &kp DEL      &trans    &trans
             >;
 
