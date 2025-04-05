@@ -18,7 +18,7 @@
   combo_##NAME { \
     timeout-ms = <50>; \
     bindings = <BINDINGS>; \
-    key-positions = <KEYPOS>,<KEYPOS>,<KEYPOS>; \
+    key-positions = <KEYPOS>; \
     layers = <1>; \
   };
 
@@ -38,10 +38,10 @@
     combos {
       compatible = "zmk,combos";
       
-      COMBO(combo_bkt, <&kp LBKT>, <&kp RBKT>, <&kp LEFT>, 1 2)
-      COMBO(combo_brc, <&kp LBRC>, <&kp RBRC>, <&kp LEFT>, 7 8)
-      COMBO(combo_t, <&kp LT>, <&kp GT>, <&kp LEFT>, 13 14)
-      COMBO(combo_par, <&kp LPAR>, <&kp RPAR>, <&kp LEFT>, 19 20)
+      COMBO(combo_bkt, <&kp LBKT> <&kp RBKT> <&kp LEFT>, 1 2)
+      COMBO(combo_brc, <&kp LBRC> <&kp RBRC> <&kp LEFT>, 7 8)
+      COMBO(combo_t, <&kp LT> <&kp GT> <&kp LEFT>, 13 14)
+      COMBO(combo_par, <&kp LPAR> <&kp RPAR> <&kp LEFT>, 19 20)
     };
 
 
