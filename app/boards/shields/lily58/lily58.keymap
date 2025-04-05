@@ -91,6 +91,9 @@
         };
     };
 
+};
+
+/{
 combo_brc {
 timeout-ms = <50>;
 key-positions = <29 30>;
@@ -103,7 +106,9 @@ label = "macro_brc";
 #binding-cells = <0>;
 bindings = <&kp LBKT>, <&kp RBKT>, <&kp LEFT>;
 };
+};
 
+/{
 combo_brc {
 timeout-ms = <50>;
 key-positions = <35 36>;
@@ -116,7 +121,9 @@ label = "macro_brc";
 #binding-cells = <0>;
 bindings = <&kp LBRC>, <&kp RBRC>, <&kp LEFT>;
 };
+};
 
+/{
 combo_brc {
 timeout-ms = <50>;
 key-positions = <41 42>;
@@ -129,7 +136,9 @@ label = "macro_brc";
 #binding-cells = <0>;
 bindings = <&kp LT>, <&kp GT>, <&kp LEFT>;
 };
+};
 
+/{
 combo_brc {
 timeout-ms = <50>;
 key-positions = <47 48>;
@@ -142,5 +151,4 @@ label = "macro_brc";
 #binding-cells = <0>;
 bindings = <&kp LPAR>, <&kp RPAR>, <&kp LEFT>;
 };
-
 };
