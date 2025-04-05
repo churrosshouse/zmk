@@ -40,13 +40,13 @@
 // ------------------------------------------------------------------------------------------------------------
 // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12 |
 // |       |     |     |  UP  |      |      |                   |RGB_ON|RGB_HUD|RGB_HUI|RGB_EFR|RGB_EFF|     |
-// |       |     | LEFT| DOWN |RIGHT |      |                   |RGB_OFF|RGB_SAD|RGB_SAI|      |       |      |
+// |  MKP  |     | LEFT| DOWN |RIGHT |      |                   |RGB_OFF|RGB_SAD|RGB_SAI|      |       |      |
 // |       |     |     |      | EP_ON|EP_OFF| EP_TOG |  |RGB_TOG|      |RGB_BRD|RGB_BRI|      |       |  \   |
 //                     |      |      |      |        |  |       |  DEL |RGB_SPD|RGB_SPI|
             bindings = <
 &kp F1  &kp F2    &kp F3   &kp F4     &kp F5            &kp F6                                                 &kp F7          &kp F8           &kp F9          &kp F10          &kp F11          &kp F12
 &none   &none     &none    &kp UP     &none              &none                                                  &none  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &none
-&none   &none     &kp LEFT &kp DOWN   &kp RIGHT          &none                                                  &none &rgb_ug RGB_SAD  &rgb_ug RGB_SAI &none            &none            &none
+&none   &mkp	  &kp LEFT &kp DOWN   &kp RIGHT          &none                                                  &none &rgb_ug RGB_SAD  &rgb_ug RGB_SAI &none            &none            &none
 &none   &none     &none    &none      &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &rgb_ug RGB_TOG  &none           &rgb_ug RGB_BRD  &rgb_ug RGB_BRI &none            &none            &kp BACKSLASH
                            &none      &none             &none              &none              &none            &kp DEL         &rgb_ug RGB_SPD  &rgb_ug RGB_SPI
             >;
@@ -74,17 +74,17 @@
 
                 adjust_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |C_BRI_DN|C_BRI_UP|     |      |      |C_PP|                 |      |      |       |C_VOL_DN|C_VOL_UP|C_MUTE|
-// |       |     |     |      |      |      |                   |      |      |       |        |        |      |
-// |       |     |     |      |      |      |                   |      |      |       |        |        |      |
-// |       |     |     |      |      |      |        |  |       |      |      |       |        |        |      |
-//                     |      |      |      |        |  |       |      |      |       |
+// |C_BRI_DN|C_BRI_UP|     |      |      |C_PP|                      |      |      |       |C_VOL_DN|C_VOL_UP|C_MUTE|
+// |       |     |     |      |      |      |                        |      |      |       |        |        |      |
+// |       |     |     |      |      |      |                        |      |      |       |        |        |      |
+// |       |     |     |      |      |      |sys_reset|  |&bootloader|      |      |       |        |        |      |
+//                     |      |      |      |         |  |           |      |      |       |
             bindings = <
-&kp C_BRI_DN  &kp C_BRI_UP &none &none  &none  &kp C_PP                 &none  &none  &none  &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE
-&none         &none        &none &none  &none  &none                    &none  &none  &none  &none        &none        &none
-&none         &none        &none &none  &none  &none                    &none  &none  &none  &none        &none        &none
-&none         &none        &none &none  &none  &none   &none   &none    &none  &none  &none  &none        &none        &kp BSLH
-                                 &none  &none  &none   &none   &none    &none  &none  &none
+&kp C_BRI_DN  &kp C_BRI_UP &none &none  &none  &kp C_PP                             &none  &none  &none  &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE
+&none         &none        &none &none  &none  &none                                &none  &none  &none  &none        &none        &none
+&none         &none        &none &none  &none  &none                                &none  &none  &none  &none        &none        &none
+&none         &none        &none &none  &none  &none   &sys_reset	   &bootloader	&none  &none  &none  &none        &none        &kp BSLH
+                                 &none  &none  &none   &none           &none        &none  &none  &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -93,7 +93,6 @@
 
 };
 
-// Combos
 / {
     combos {
         compatible = "zmk,combos";
