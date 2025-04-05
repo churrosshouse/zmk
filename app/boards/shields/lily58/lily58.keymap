@@ -20,7 +20,7 @@
             compatible = "zmk,combos";
             combo_bkt {
                 timeout-ms = <50>;
-                key-positions = 1 2>;
+                key-positions = <1 2>;
                 bindings = <&kp LBKT>,<&kp RBKT>,<&kp LEFT>;
             };
         };
