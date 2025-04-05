@@ -90,4 +90,57 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
+
+combo_brc {
+timeout-ms = <50>;
+key-positions = <29 30>;
+bindings = <&macro_brc>;
+};
+
+macro_brc: macro_brc {
+compatible = "zmk,behavior-macro";
+label = "macro_brc";
+#binding-cells = <0>;
+bindings = <&kp LBKT>, <&kp RBKT>, <&kp LEFT>;
+};
+
+combo_brc {
+timeout-ms = <50>;
+key-positions = <35 36>;
+bindings = <&macro_brc>;
+};
+
+macro_brc: macro_brc {
+compatible = "zmk,behavior-macro";
+label = "macro_brc";
+#binding-cells = <0>;
+bindings = <&kp LBRC>, <&kp RBRC>, <&kp LEFT>;
+};
+
+combo_brc {
+timeout-ms = <50>;
+key-positions = <41 42>;
+bindings = <&macro_brc>;
+};
+
+macro_brc: macro_brc {
+compatible = "zmk,behavior-macro";
+label = "macro_brc";
+#binding-cells = <0>;
+bindings = <&kp LT>, <&kp GT>, <&kp LEFT>;
+};
+
+combo_brc {
+timeout-ms = <50>;
+key-positions = <47 48>;
+bindings = <&macro_brc>;
+};
+
+macro_brc: macro_brc {
+compatible = "zmk,behavior-macro";
+label = "macro_brc";
+#binding-cells = <0>;
+bindings = <&kp LPAR>, <&kp RPAR>, <&kp LEFT>;
+};
+
 };
